@@ -12,7 +12,7 @@ unlink(temp)
 
 path <- getwd()
 
-# Read in data and only subset for only for only two days 2007-02-01 and 2007-02-02
+# Read in data and subset only for two days 2007-02-01 and 2007-02-02
 dt <- fread(file.path(path, "household_power_consumption.txt"),sep=";",na.strings="?",header=TRUE,
             stringsAsFactors=FALSE)
 dt <- filter(dt,Date %in% c("1/2/2007","2/2/2007"))
